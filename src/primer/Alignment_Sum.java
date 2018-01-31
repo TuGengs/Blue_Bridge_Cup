@@ -4,6 +4,14 @@ import java.util.Scanner;
 
 public class Alignment_Sum {
 
+	/**
+	 * 
+	 * 3.0 -> 3
+	 * 3.1 -> 3.1
+	 * 
+	 * @param d
+	 * @return
+	 */
 	public static String doubleTrans(double d) {
 		
 		if (Math.round(d) - d == 0) {
