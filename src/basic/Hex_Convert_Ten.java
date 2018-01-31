@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 
  * 
- * T 给定n个十六进制正整数，输出它们对应的十进制数。
+ * T 给定1个十六进制正整数，输出它们对应的十进制数。
  * 
  * @author tugeng
  *
