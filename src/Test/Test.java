@@ -7,17 +7,21 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		
-		String str = "123Asc";
+//		String str = "123Asc";
+//		
+//		int i = 789;
+//		
+//		int w = i / 100;
+//		int q = (i % 100) / 10;
+//		int b = i % 10;
+//		
+//		System.out.println(w + " " + q + " " + b);
 		
-		int i = 789;
+		int b[][] = new int[1][2];
 		
-		int w = i / 100;
-		int q = (i % 100) / 10;
-		int b = i % 10;
+		System.out.println(b[0][1]);
 		
-		System.out.println(w + " " + q + " " + b);
-		
-		System.out.println(str.toUpperCase());
+//		System.out.println(str.toUpperCase());
 		
 	}
 
