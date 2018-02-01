@@ -17,7 +17,7 @@ import java.util.Scanner;
  * @author tugeng
  *
  */
-public class High_Precision_Vip2 {
+public class High_Precision_Vip2 { 
 	
 	public static void main(String[] args) {
 		
