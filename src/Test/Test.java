@@ -40,59 +40,45 @@ public class Test {
 		//
 		// System.out.println(Arrays.binarySearch(l, 8));
 
-		String a[] = { "123", "321", "xxx"};
-
-		String b[];
+		int a[] = {0,1,1,1};
 		
 		
+		int b[] = is_Zero_One_String(a);
 		
-		for (int j = 0; j < 3; j++) {
 		
-			b = right_move(a);
+		for (int i = 0; i < b.length; i++) {
 			
+			System.out.print(b[i] + " ");
 			
-			System.out.println();
-			
-		
 		}
 		
+		System.out.println();
 		
 		
 
 	}
 
-public static String[] right_move(String[] strs) {
+	public static int[] is_Zero_One_String(int a[]) {
 		
-		String str = strs[strs.length - 1];
+		int index = a.length - 1;
 		
-//		[1 2 3 4 5]
-//		[5 1 2 3 4]    [1 2 3 4 5]
-		
-		String[] strs2 = strs.clone();
+		a[index] += 1;
 		
 		
-		for(int i = 0; i < strs.length - 1; i++) {
+		for (int i = index; i >= 0; i--) {
 			
-			strs2[i + 1] = strs[i]; 
 			
-		}
-		
-		
-		for(int i = 0; i < strs2.length; i++) {
-			
-			System.out.print(strs2[i] + " "); 
+			if (a[i] >= 2) {
+				
+				a[i] = 0;
+				
+				a[i - 1] += 1;
+				
+			}
 			
 		}
 		
-		
-		System.out.println("str: " + str);
-		
-		strs2[0] = str;
-		
-		System.out.println("strs2[0]: " + strs2[0]);
-		
-		return strs2;
-		
+		return a;
 	}
 
 }
