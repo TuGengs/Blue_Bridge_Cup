@@ -72,6 +72,14 @@ public class Test {
 	        boolean begin = false;  
 	        
 	        long endTime=System.currentTimeMillis(); //获取结束时间
+	        
+//	        for (int i = a.length - 1; i >= 0; i--) {  
+//
+//	                System.out.print(a[i]);  
+//
+//	        }  
+	        
+	        System.out.println();
 	  
 	        for (int i = a.length - 1; i >= 0; i--) {  
 	            if (begin) {  
