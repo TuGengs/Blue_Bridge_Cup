@@ -1,6 +1,9 @@
 package Test;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Test {
@@ -150,15 +153,29 @@ public class Test {
 //		
 //		System.out.println(a[0] + 1);
 		
-		BigDecimal aBigDecimal ;
-        BigDecimal bigDecimal;
-        BigDecimal cBigDecimal;
-        Scanner scanner = new Scanner(System.in);
-        aBigDecimal = scanner.nextBigDecimal();
-        bigDecimal = scanner.nextBigDecimal();
-        cBigDecimal = aBigDecimal.add(bigDecimal);
-        System.out.println(cBigDecimal);
+//		BigDecimal aBigDecimal ;
+//        BigDecimal bigDecimal;
+//        BigDecimal cBigDecimal;
+//        Scanner scanner = new Scanner(System.in);
+//        aBigDecimal = scanner.nextBigDecimal();
+//        bigDecimal = scanner.nextBigDecimal();
+//        cBigDecimal = aBigDecimal.add(bigDecimal);
+//        System.out.println(cBigDecimal);
+		
+		List<Integer> l = new ArrayList<Integer>();
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		
+		for (Integer integer : l) {
+			System.out.println(integer);
+		}
+		
 		
 	}
+	
+//	public void fff(List<Integer> l) {
+//		l.add(1);
+//	}
 
 }
