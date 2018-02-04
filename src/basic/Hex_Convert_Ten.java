@@ -76,7 +76,6 @@ public class Hex_Convert_Ten {
 		
 		long sum = 0;
 		
-		
 		for (int i = 0; i < str.length(); i++){
 			
 			String ch = str.substring(i, i+1); 
