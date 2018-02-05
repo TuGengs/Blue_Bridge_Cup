@@ -239,6 +239,10 @@ public class Test {
 	@org.junit.Test
 	public void test2() {
 		
+		int a[][] = new int[3][3];
+		ddd(a);
+		System.out.println(a[0][0]);
+		
 //		char a[] = {'a'};
 //		
 //		int b = (a[0] + 1);
@@ -270,4 +274,24 @@ public class Test {
 //		l.add(1);
 //	}
 
+	public void ddd(int a[][]) {
+		
+		a[0][0] = 3;
+		
+	}
+	
+	@org.junit.Test
+	public void test3() {
+		
+		String str1 = "hello";
+				
+		String str2 = "h" + "ello";
+	
+		System.out.println(str1.equals(str2));
+		
+		System.out.println(str1 == str2);
+		
+	
+	}
+	
 }
