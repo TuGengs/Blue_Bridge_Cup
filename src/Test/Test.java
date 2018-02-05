@@ -1,5 +1,10 @@
 package Test;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +16,7 @@ public class Test {
 	public static int a = 0;
 	
 	@org.junit.Test
-	public void test() {
+	public void test() throws Exception {
 
 		// String str = "123Asc";
 		//
@@ -44,11 +49,11 @@ public class Test {
 		// System.out.println(Arrays.binarySearch(l, 8));
 
 		//output
-		String str = "5399078704881151299835410380560556041120756365346315261399954724376855527321903795111280526041015730";
-		
-		String stp = "5399078704881151299835410380560556041120756365346315261399954724376855527321903795111280526041015730";
-		
-		System.out.println(str.equals(stp));
+//		String str = "5399078704881151299835410380560556041120756365346315261399954724376855527321903795111280526041015730";
+//		
+//		String stp = "5399078704881151299835410380560556041120756365346315261399954724376855527321903795111280526041015730";
+//		
+//		System.out.println(str.equals(stp));
 		
 		
 //			int[] a = new int[100000];  
@@ -99,6 +104,93 @@ public class Test {
 //	        System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
 //		
 //		
+		
+		
+		File f = new File("/Users/tugeng/Downloads/蓝桥/蓝桥杯题目和测试数据/基础训练/报时助手");
+		
+		File[] fs = f.listFiles();
+		
+		List<File> l1 = new ArrayList<File>();
+		
+		List<File> l2 = new ArrayList<File>();
+		
+		for (File file : fs) {
+			
+			if (file.getName().contains("input")) {
+				
+				l1.add(file);
+				
+			} 
+			
+			else if (file.getName().contains("output")) {
+				
+				l2.add(file);
+				
+			}
+			
+		}
+		
+		System.out.println("input:");
+		
+		for (int i = 0; i < l1.size(); i++) {
+			
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(l1.get(i).getPath()));
+			
+			BufferedReader br = new BufferedReader(isr);
+			 
+			String line = "";
+			 
+//	         line = br.readLine();
+	         
+//	         System.out.println(line);
+	         
+	        while (line != null) {  
+	        	
+				line = br.readLine(); // 一次读入一行数据
+			 
+				if (line != null) {
+					
+					System.out.println(line);
+					
+				}
+	             
+	        }  
+			
+		}
+		
+		
+		System.out.println("output:");
+		
+		for (int i = 0; i < l2.size(); i++) {
+			
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(l2.get(i).getPath()));
+			
+			BufferedReader br = new BufferedReader(isr);
+			 
+			String line = "";
+			 
+//	         line = br.readLine();
+	         
+//	         System.out.println(line);
+	         
+	        while (line != null) {  
+	        	
+				line = br.readLine(); // 一次读入一行数据  
+			 
+				if (line != null) {
+					
+					System.out.println(line);
+					 
+				}
+	             
+	        }  
+			
+	        
+		}
+		
+
+		
+		
 }
 	
 	
@@ -162,14 +254,14 @@ public class Test {
 //        cBigDecimal = aBigDecimal.add(bigDecimal);
 //        System.out.println(cBigDecimal);
 		
-		List<Integer> l = new ArrayList<Integer>();
-		l.add(1);
-		l.add(2);
-		l.add(3);
-		
-		for (Integer integer : l) {
-			System.out.println(integer);
-		}
+//		List<Integer> l = new ArrayList<Integer>();
+//		l.add(1);
+//		l.add(2);
+//		l.add(3);
+//		
+//		for (Integer integer : l) {
+//			System.out.println(integer);
+//		}
 		
 		
 	}
