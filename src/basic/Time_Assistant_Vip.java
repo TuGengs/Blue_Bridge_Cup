@@ -49,7 +49,7 @@ import java.util.Scanner;
  * @author tugengs
  *
  */
-public class Time_Assistant {
+public class Time_Assistant_Vip {
 	
 	public static void init(Map<Integer, String> map) {
 		
