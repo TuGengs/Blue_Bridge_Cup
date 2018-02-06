@@ -284,13 +284,21 @@ public class Test {
 	@org.junit.Test
 	public void test3() {
 		
-		String str1 = "hello";
-				
-		String str2 = "h" + "ello";
-	
-		System.out.println(str1.equals(str2));
+//		String str1 = "hello";
+//				
+//		String str2 = "h" + "ello";
+//	
+//		System.out.println(str1.equals(str2));
+//		
+//		System.out.println(str1 == str2);
 		
-		System.out.println(str1 == str2);
+		int i = 1;
+		
+		String si = i + "";
+		
+		System.out.println(si);
+		
+		System.out.println(i + 1 + " " + 1);
 		
 	
 	}
