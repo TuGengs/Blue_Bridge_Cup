@@ -22,6 +22,7 @@ import java.util.Scanner;
  * 样例输入 10 5 5 2 20 样例输出 D 4 样例输入 10 5 5 1 20 样例输出 R 3 样例输入 10 5 5 3 20 样例输出 T 4
  * 
  * 
+ * 
  * @author tugeng
  *
  */
