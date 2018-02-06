@@ -106,7 +106,7 @@ public class Test {
 //		
 		
 		
-		File f = new File("/Users/tugeng/Downloads/蓝桥/蓝桥杯题目和测试数据/基础训练/报时助手");
+		File f = new File("/Users/tugeng/Downloads/蓝桥/蓝桥杯题目和测试数据/基础训练/龟兔赛跑预测");
 		
 		File[] fs = f.listFiles();
 		
@@ -129,6 +129,7 @@ public class Test {
 			}
 			
 		}
+		
 		
 		System.out.println("input:");
 		
