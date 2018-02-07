@@ -296,7 +296,7 @@ public class Test {
 		
 		int i = 1;
 		
-		String si = i + "";
+		String si = "123" + i;
 		
 		System.out.println(si);
 		
