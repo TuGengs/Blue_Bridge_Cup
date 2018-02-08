@@ -293,14 +293,33 @@ public class Test {
 //		System.out.println(str1.equals(str2));
 //		
 //		System.out.println(str1 == str2);
+//		
+//		int i = 1;
+//		
+//		String si = "123" + i;
+//		
+//		System.out.println(si);
+//		
+//		System.out.println(i + 1 + " " + 1);
 		
-		int i = 1;
+//		for (int i = 0; i < 3; i++) {
+//			
+//			if (i < 100) {
+//				
+//				continue;
+//				
+//			}
+//			
+//			System.out.println(123);
+//			
+//		}
+//		
 		
-		String si = "123" + i;
 		
-		System.out.println(si);
 		
-		System.out.println(i + 1 + " " + 1);
+		String str = "1234";
+		
+		System.out.println(Integer.valueOf('1' + ""));
 		
 	
 	}
