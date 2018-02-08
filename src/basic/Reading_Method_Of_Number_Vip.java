@@ -37,61 +37,6 @@ public class Reading_Method_Of_Number_Vip {
 											"bai wan", "qian wan", "yi"};
 	
 	
-	public static char[] eliminate(char[] cn, int cnlh) {
-		
-		if (Integer.valueOf(String.valueOf(cn)) == 0) {
-			
-			return new char[0];
-			
-		}
-		
-		
-		int l = -1;
-		
-		for (int i = 0; i < cnlh; i++) {
-			
-			if ('0' == cn[i]) {
-				
-				continue;
-				
-			} else {
-				
-				l = i;
-				
-				break;
-				
-			}
-			
-		}
-		
-//		System.out.println(l);
-		
-		
-		char[] a = new char[cnlh - l + 1];
-		
-		a[0] = '0';
-		
-		int ll = l;
-
-		//易错点，循环内不要出现 循环判定条件中的变量
-		for (int i = 1; i <= cnlh - l; i++) {
-			
-			a[i] = cn[ll];
-			
-			ll++;
-			
-		}
-		
-//		System.out.println(a.length);
-		
-//		System.out.println(a[2]);
-		
-		return a;
-		
-		
-	}
-	
-	
 	public static String trimling(String n) {
 		
 		n = n.trim();
@@ -120,12 +65,6 @@ public class Reading_Method_Of_Number_Vip {
 		char[] cn = n.toCharArray();
 		
 		int cnlh = cn.length;
-		
-//		cn = eliminate(cn, cnlh);
-		
-//		cnlh = cn.length;
-		
-//		System.out.println(n);
 		
 		String rs = "";
 		
@@ -178,7 +117,6 @@ public class Reading_Method_Of_Number_Vip {
 			
 		}
 		
-//		rs = trimling(rs);
 		
 		if (k == 1) {
 		
