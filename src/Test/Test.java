@@ -18,149 +18,63 @@ public class Test {
 	
 	@org.junit.Test
 	public void test() throws Exception {
-
-		// String str = "123Asc";
-		//
-		// int i = 789;
-		//
-		// int w = i / 100;
-		// int q = (i % 100) / 10;
-		// int b = i % 10;
-		//
-		// System.out.println(w + " " + q + " " + b);
-
-		// int b[][] = new int[1][2];
-		//
-		// System.out.println(b[0][1]);
-
-		// System.out.println(str.toUpperCase());
-
-		// Scanner sc = new Scanner(System.in);
-		//
-		// Integer a = sc.nextInt();
-
-		// int l[] = new int[a.intValue()];
-		//
-		// for(int i = 0; i < a.intValue(); i++) {
-		//
-		// l[i] = sc.nextInt();
-		//
-		// }
-		//
-		// System.out.println(Arrays.binarySearch(l, 8));
-
-		//output
-		String str = "ABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAGABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAHABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAGABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABA";
 		
-		String stp = "ABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAGABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAHABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABAGABACABADABACABAEABACABADABACABAFABACABADABACABAEABACABADABACABA";
 		
-		System.out.println(str.equals(stp));
+		File f = new File("/Users/tugeng/Downloads/蓝桥/蓝桥杯题目和测试数据/基础训练/时间转换");
 		
+		File[] fs = f.listFiles();
+		
+		List<File> l1 = new ArrayList<File>();
+		
+		List<File> l2 = new ArrayList<File>();
+		
+		for (File file : fs) {
+			
+			if (file.getName().contains("input")) {
+				
+				l1.add(file);
+				
+			} 
+			
+			else if (file.getName().contains("output")) {
+				
+				l2.add(file);
+				
+			}
+			
+		}
+		
+		
+		System.out.println("input:");
+		
+		for (int i = 0; i < l1.size(); i++) {
+			
+			InputStreamReader isr = new InputStreamReader(new FileInputStream(l1.get(i).getPath()));
+			
+			BufferedReader br = new BufferedReader(isr);
+			 
+//			System.out.println(l1.get(i).getName());
+			
+			String line = "";
+			 
+//	         line = br.readLine();
+	         
+//	         System.out.println(line);
+	         
+	        while (line != null) {  
+	        	
+				line = br.readLine(); // 一次读入一行数据
+			 
+				if (line != null) {
+					
+					System.out.println(line);
+					
+				}
+	             
+	        }  
+			
+		}
 	}
-		
-		
-//			int[] a = new int[100000];  
-//	        Scanner sc = new Scanner(System.in);  
-//
-//	        int n = sc.nextInt();  
-//
-//	        long startTime=System.currentTimeMillis();   //获取开始时间
-//	        
-//	        sc.close();  
-//	        a[0] = 1;  
-//	  
-//	        for (int i = 2; i <= n; i++) {  
-//	            int jw = 0;  
-//	            for (int j = 0; j < a.length; j++) {  
-//	                int temp = a[j] * i + jw;  
-//	                a[j] = temp % 10;  
-//	                jw = temp / 10;  
-//	            }  
-//	  
-//	        }  
-//	  
-//	        boolean begin = false;  
-//	        
-//	        long endTime=System.currentTimeMillis(); //获取结束时间
-//	        
-////	        for (int i = a.length - 1; i >= 0; i--) {  
-////
-////	                System.out.print(a[i]);  
-////
-////	        }  
-//	        
-//	        System.out.println();
-//	  
-//	        for (int i = a.length - 1; i >= 0; i--) {  
-//	            if (begin) {  
-//	                System.out.print(a[i]);  
-//	                continue;  
-//	            }  
-//	  
-//	            if (a[i - 1] != 0) {  
-//	                begin = true;  
-//	            }  
-//	        }  
-//	        
-//	        System.out.println();
-//	        
-//	        System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
-//		
-//		
-		
-		
-//		File f = new File("/Users/tugeng/Downloads/蓝桥/蓝桥杯题目和测试数据/基础训练/龟兔赛跑预测");
-//		
-//		File[] fs = f.listFiles();
-//		
-//		List<File> l1 = new ArrayList<File>();
-//		
-//		List<File> l2 = new ArrayList<File>();
-//		
-//		for (File file : fs) {
-//			
-//			if (file.getName().contains("input")) {
-//				
-//				l1.add(file);
-//				
-//			} 
-//			
-//			else if (file.getName().contains("output")) {
-//				
-//				l2.add(file);
-//				
-//			}
-//			
-//		}
-//		
-//		
-//		System.out.println("input:");
-//		
-//		for (int i = 0; i < l1.size(); i++) {
-//			
-//			InputStreamReader isr = new InputStreamReader(new FileInputStream(l1.get(i).getPath()));
-//			
-//			BufferedReader br = new BufferedReader(isr);
-//			 
-//			String line = "";
-//			 
-////	         line = br.readLine();
-//	         
-////	         System.out.println(line);
-//	         
-//	        while (line != null) {  
-//	        	
-//				line = br.readLine(); // 一次读入一行数据
-//			 
-//				if (line != null) {
-//					
-//					System.out.println(line);
-//					
-//				}
-//	             
-//	        }  
-//			
-//		}
 //		
 //		
 //		System.out.println("output:");
