@@ -319,8 +319,36 @@ public class Test {
 		
 		String str = "1234";
 		
-		System.out.println(Integer.valueOf('1' + ""));
+		char[] a = {'1','2'};
 		
+//		System.out.println(Integer.valueOf('1' + ""));
+		
+//		System.out.println(str.substring(0, 1));
+		
+//		System.out.println(a.toString());
+		
+		XXX:
+		for (int i = 0; i < 2; i++) {
+			
+			int x = 0;
+			
+			for (int j = 0; j < 2; j++) {
+				
+				if (i == 0) {
+					break;
+				}
+				
+				if (j == 1) {
+					continue XXX;
+				}
+			}
+			
+			
+			System.out.println(111);
+			
+		}
+		
+		System.out.println(222);
 	
 	}
 	
