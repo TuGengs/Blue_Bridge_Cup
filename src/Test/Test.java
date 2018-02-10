@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -327,28 +328,36 @@ public class Test {
 		
 //		System.out.println(a.toString());
 		
-		XXX:
-		for (int i = 0; i < 2; i++) {
-			
-			int x = 0;
-			
-			for (int j = 0; j < 2; j++) {
-				
-				if (i == 0) {
-					break;
-				}
-				
-				if (j == 1) {
-					continue XXX;
-				}
-			}
-			
-			
-			System.out.println(111);
-			
-		}
+//		XXX:
+//		for (int i = 0; i < 2; i++) {
+//			
+//			int x = 0;
+//			
+//			for (int j = 0; j < 2; j++) {
+//				
+//				if (i == 0) {
+//					break;
+//				}
+//				
+//				if (j == 1) {
+//					continue XXX;
+//				}
+//			}
+//			
+//			
+//			System.out.println(111);
+//			
+//		}
+//		
+//		System.out.println(222);
 		
-		System.out.println(222);
+		DecimalFormat df = new DecimalFormat("0.00");
+		
+		DecimalFormat df2 = new DecimalFormat("#.##");
+		
+		System.out.println(df.format(1123.0));
+		
+//		System.out.println(df2.format(1.0));
 	
 	}
 	
