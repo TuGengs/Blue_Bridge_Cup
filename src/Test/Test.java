@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -232,9 +233,9 @@ public class Test {
 		
 		
 		
-		String str = "1234";
-		
-		char[] a = {'1','2'};
+//		String str = "1234";
+//		
+//		char[] a = {'1','2'};
 		
 //		System.out.println(Integer.valueOf('1' + ""));
 		
@@ -265,11 +266,24 @@ public class Test {
 //		
 //		System.out.println(222);
 		
-		DecimalFormat df = new DecimalFormat("0.00");
+//		DecimalFormat df = new DecimalFormat("0.00");
+//		
+//		DecimalFormat df2 = new DecimalFormat("#.##");
+//		
+//		System.out.println(df.format(1123.0));
 		
-		DecimalFormat df2 = new DecimalFormat("#.##");
 		
-		System.out.println(df.format(1123.0));
+		int aa[] = {32392, 14605, 3903, 154, 293, 12383, 17422, 18717, 19719, 19896, 5448, 21727, 14772, 11539, 1870, 19913, 25668};
+		
+//		int aaa[] = Arrays.copyOfRange(aa, 0, 3);
+		
+		Arrays.sort(aa);
+		
+		for (int i = 0; i < aa.length; i++) {
+			
+			System.out.print(aa[i] + " ");
+			
+		}
 		
 //		System.out.println(df2.format(1.0));
 	

@@ -25,13 +25,11 @@ import java.util.Scanner;
  *
  */
 public class Interval_K_Large_Number_Query {
-
+	
 	// [0, size-1]
 	public static int Quick_Sort(int a[], int low, int high) {
 		
 		int temp = a[low];
-		
-		int pos = low;
 		
 		int i = low;
 		
@@ -40,95 +38,82 @@ public class Interval_K_Large_Number_Query {
 		
 		while (i < j) {
 			
-			while (i < j && a[j] > temp) {
+			while (i < j && a[j] >= temp) {
 				
 				j --;
 				
 			}
 			
-			if (i < j) {
-				
-				a[pos] = a[j];
-				
-				pos = j;
-				
-			}
+			int appos = a[i];
 			
-			 while(i < j && a[i] < temp) {
+			a[i] = a[j];
+				
+			a[j] = appos;
+			
+			
+			 while(i < j && a[i] <= temp) {
 				 
 				 i ++;
 				 
 			 }  
 
 			 
-			 if(i < j) {  
-				 
-				 a[pos] = a[i];
-				 
-				 pos = i;
-				 
-			 }  
+				int appos2 = a[i];
+				
+				a[i] = a[j];
+					
+				a[j] = appos2;
 			 
 			 
 		}
 		
-		a[pos] = temp;
 		
-	    return pos;
+	    return i;
 		
 }
 	
 	public static int Findkth(int a[], int n, int k) {
 
 	    int low = 0;
+	    
 	    int high = n - 1;
+	    
+	    int pos = Quick_Sort(a, low, high);
 	    
 	    while(true) {
 	    	
-	        int pos = Quick_Sort(a, low, high);
-	        
-	        if(pos == n - k) {
+	        if(n - k < pos) {
 	        	
-	        	return a[pos];
+	        	pos = Quick_Sort(a, 0, pos - 1);
 	        	
-	        }  
-	            
-	        else if(pos < n - k) {
+	        } else {
 	        	
-	            low = pos + 1;
-	            
-	            high = n - 1;
-	            
-	        }  
-	        else if(pos > n - k) {
+	        	if (n - k > pos) {
+	        		
+	        		pos = Quick_Sort(a, pos + 1, high);
+	        		
+	        	}
 	        	
-	            high = pos - 1;
+	        	if (n - k == pos) {
+	        		
+	        		return a[pos];
+	        		
+	        	}
+	        	
+	        	
+	        }
 	            
-	            low = 0;  
-	            
-	        }  
 	        
 	    }  
+	    
 	    
 	}  
 	
 	public static int[] CopyArrays(int a[], int left, int right) {
 		
-		int b[] = new int[right - left + 1];
-		
-		int j = 0;
-		
-		for (int i = left; i <= right; i++) {
-			
-			b[j] = a[i];
-			
-			j++;
-			
-		}
-		
+		int b[] = Arrays.copyOfRange(a, left, right + 1);
 		
 		return b;
-		
 		
 	}
  	
@@ -158,27 +143,31 @@ public class Interval_K_Large_Number_Query {
 				
 			}
 			
-			
+			//32392 14605 3903 154 293 12383 17422 18717 19719 19896 5448 21727 14772 11539 1870 19913 25668
 		}
 		
-		
+		long state_time = System.nanoTime(); 
 		
 //		1 5 2
 //		2 3 2
 		for (int i = 0; i < n.intValue(); i++) {
 			
-//			System.out.println(Findkth(
-//					CopyArrays(b, c[i][0] - 1, c[i][1] - 1), (c[i][1] - c[i][0]) + 1, c[i][2]));
+			int p[] = CopyArrays(b, c[i][0] - 1, c[i][1] - 1);
 			
-			int temp[] = CopyArrays(b, c[i][0] - 1, c[i][1] - 1);
-			
-			Arrays.sort(temp);
-			
-			System.out.println(temp[temp.length - c[i][2]]);
+			System.out.println(Findkth(p, p.length, c[i][2]));
+
+//			int temp[] = CopyArrays(b, c[i][0] - 1, c[i][1] - 1);
+//			
+//			Arrays.sort(temp);
+////			1328000 ns 1875000ns 3809000ns
+//			System.out.println(temp[temp.length - c[i][2]]);
 			
 			
 		}
 		
+		long end_time = System.nanoTime();
+		//1185000 ns  1704000ns 2498000ns
+		System.out.println(end_time - state_time);
 		
 		
 	}
