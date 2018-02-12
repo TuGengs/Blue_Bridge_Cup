@@ -37,8 +37,9 @@ public class Interval_K_Large_Number_Query {
 		
 		
 		while (i < j) {
-			
-			while (i < j && a[j] >= temp) {
+//			>= 很重要用于判断是否相等的情况。比如1 2 2 3返回第二大其实就是第三大，
+//			因此结果不会有误差也不会进入死循环。
+			while (i < j && a[j] >= temp) {   
 				
 				j --;
 				
