@@ -273,17 +273,19 @@ public class Test {
 //		System.out.println(df.format(1123.0));
 		
 		
-		int aa[] = {32392, 14605, 3903, 154, 293, 12383, 17422, 18717, 19719, 19896, 5448, 21727, 14772, 11539, 1870, 19913, 25668};
+//		int aa[] = {32392, 14605, 3903, 154, 293, 12383, 17422, 18717, 19719, 19896, 5448, 21727, 14772, 11539, 1870, 19913, 25668};
 		
 //		int aaa[] = Arrays.copyOfRange(aa, 0, 3);
 		
-		Arrays.sort(aa);
+//		Arrays.sort(aa);
 		
-		for (int i = 0; i < aa.length; i++) {
-			
-			System.out.print(aa[i] + " ");
-			
-		}
+//		for (int i = 0; i < aa.length; i++) {
+//			
+//			System.out.print(aa[i] + " ");
+//			
+//		}
+		
+		System.out.println(Integer.MAX_VALUE);
 		
 //		System.out.println(df2.format(1.0));
 	
