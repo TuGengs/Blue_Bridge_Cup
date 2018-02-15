@@ -1,4 +1,4 @@
-package algorithm.training;
+package algorithm;
 
 /**
  * 

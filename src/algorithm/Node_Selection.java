@@ -1,4 +1,4 @@
-package algorithm.training;
+package algorithm;
 
 import java.util.ArrayList;
 import java.util.HashMap;
