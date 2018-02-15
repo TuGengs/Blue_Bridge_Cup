@@ -10,7 +10,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Test {
@@ -285,7 +288,30 @@ public class Test {
 //			
 //		}
 		
-		System.out.println(Integer.MAX_VALUE);
+//		System.out.println(Integer.MAX_VALUE);
+		
+//		Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+//		
+//		map.put(1, new ArrayList<Integer>());
+//		
+//		map.get(1).add(123);
+		
+//		System.out.println(map.get(1));
+		
+		List<Integer> l = new ArrayList<Integer>();
+		
+		l.add(1);
+		
+		l.add(2);
+		
+		Iterator<Integer> ir = l.iterator();
+		
+		if (ir.next() != 32) {
+			
+			System.out.println(ir.next());
+			
+		}
+		
 		
 //		System.out.println(df2.format(1.0));
 	
