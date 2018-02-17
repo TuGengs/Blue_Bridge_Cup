@@ -161,9 +161,9 @@ public class Test {
 	@org.junit.Test
 	public void test2() {
 		
-		int a[][] = new int[3][3];
+		int a[] = new int[3];
 		ddd(a);
-		System.out.println(a[0][0]);
+		System.out.println(a[0]);
 		
 //		char a[] = {'a'};
 //		
@@ -196,9 +196,9 @@ public class Test {
 //		l.add(1);
 //	}
 
-	public void ddd(int a[][]) {
+	public void ddd(int a[]) {
 		
-		a[0][0] = 3;
+		a[0] = 3;
 		
 	}
 	
@@ -316,5 +316,7 @@ public class Test {
 //		System.out.println(df2.format(1.0));
 	
 	}
+	
+
 	
 }
