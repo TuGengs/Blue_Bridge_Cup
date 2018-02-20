@@ -7,13 +7,22 @@ public class T {
 	@Test
 	public void fun2() {
 		
-		int b;
+//		int b;
+//		
+//		int c;
+//		
+//		b = c = 3;
+//		
+//		System.out.println(b + " " + c);
 		
-		int c;
+		int a = 8;
 		
-		b = c = 3;
+		System.out.println(Math.ceil(Math.log(a) / Math.log(2.0)) + 1);
 		
-		System.out.println(b + " " + c);
+		int x = (int) Math.pow(
+				2.0, (Math.ceil(Math.log(a) / Math.log(2.0)) + 1));
+		
+		System.out.println(x);
 		
 	}
 	
