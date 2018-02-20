@@ -5,6 +5,19 @@ import org.junit.Test;
 public class T {
 
 	@Test
+	public void fun2() {
+		
+		int b;
+		
+		int c;
+		
+		b = c = 3;
+		
+		System.out.println(b + " " + c);
+		
+	}
+	
+	@Test
 	public void fun() {
 		
 		int c[] = {-1,5,11,7,2,3,17};
