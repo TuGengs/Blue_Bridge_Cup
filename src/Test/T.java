@@ -1,5 +1,10 @@
 package Test;
 
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
 import org.junit.Test;
 
 public class T {
@@ -15,15 +20,35 @@ public class T {
 //		
 //		System.out.println(b + " " + c);
 		
-		int a = 8;
+//		int a = 8;
+//		
+//		System.out.println(Math.ceil(Math.log(a) / Math.log(2.0)) + 1);
+//		
+//		int x = (int) Math.pow(
+//				2.0, (Math.ceil(Math.log(a) / Math.log(2.0)) + 1));
+//		
+//		System.out.println(x);
 		
-		System.out.println(Math.ceil(Math.log(a) / Math.log(2.0)) + 1);
-		
-		int x = (int) Math.pow(
-				2.0, (Math.ceil(Math.log(a) / Math.log(2.0)) + 1));
-		
-		System.out.println(x);
-		
+		 LinkedHashMap lhm = new LinkedHashMap();
+		 
+		 lhm.put("Zara", new Double(3434.34));
+	     lhm.put("Mahnaz", new Double(123.22));
+	     lhm.put("ZaraX", new Double(3435.34));
+	     
+	     Set set = lhm.entrySet();
+	     
+	     Iterator i = set.iterator();
+	     
+	     while(i.hasNext()) {
+	         Map.Entry me = (Map.Entry)i.next();
+	         System.out.print(me.getKey() + ": ");
+	         System.out.println(me.getValue());
+	      }
+	     
+	      System.out.println();
+	     
+	      
+	      
 	}
 	
 	@Test
