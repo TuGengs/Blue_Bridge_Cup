@@ -1,5 +1,6 @@
 package Test;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -29,25 +30,49 @@ public class T {
 //		
 //		System.out.println(x);
 		
-		 LinkedHashMap lhm = new LinkedHashMap();
-		 
-		 lhm.put("Zara", new Double(3434.34));
-	     lhm.put("Mahnaz", new Double(123.22));
-	     lhm.put("ZaraX", new Double(3435.34));
+//		 LinkedHashMap lhm = new LinkedHashMap();
+//		 
+//		 lhm.put("Zara", new Double(3434.34));
+//	     lhm.put("Mahnaz", new Double(123.22));
+//	     lhm.put("ZaraX", new Double(3435.34));
+//	     
+//	     Set set = lhm.entrySet();
+//	     
+//	     Iterator i = set.iterator();
+//	     
+//	     while(i.hasNext()) {
+//	         Map.Entry me = (Map.Entry)i.next();
+//	         System.out.print(me.getKey() + ": ");
+//	         System.out.println(me.getValue());
+//	      }
+//	     
+//	      System.out.println();
+		
+		String str = "Rimon";
+
+		String str2 = "MinOR";
+		
+		char ch1[] = str.toLowerCase().toCharArray();
+		
+		char ch2[] = str2.toLowerCase().toCharArray();
+		
+		char ch3[] = str2.toUpperCase().toCharArray();
+		
+		Arrays.sort(ch1);
+		
+		Arrays.sort(ch2);
+		
+		Arrays.sort(ch3);
+		
+		
+		System.out.println(Arrays.equals(ch1, ch3));
+		
+		System.out.println(Arrays.equals(ch1, ch2));
 	     
-	     Set set = lhm.entrySet();
-	     
-	     Iterator i = set.iterator();
-	     
-	     while(i.hasNext()) {
-	         Map.Entry me = (Map.Entry)i.next();
-	         System.out.print(me.getKey() + ": ");
-	         System.out.println(me.getValue());
-	      }
-	     
-	      System.out.println();
-	     
-	      
+	    System.out.println(ch1);
+	    
+	    System.out.println(ch2);
+	    
 	      
 	}
 	
