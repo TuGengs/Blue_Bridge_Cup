@@ -1,5 +1,8 @@
 package Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -11,68 +14,16 @@ import org.junit.Test;
 public class T {
 
 	@Test
-	public void fun2() {
-		
-//		int b;
-//		
-//		int c;
-//		
-//		b = c = 3;
-//		
-//		System.out.println(b + " " + c);
-		
-//		int a = 8;
-//		
-//		System.out.println(Math.ceil(Math.log(a) / Math.log(2.0)) + 1);
-//		
-//		int x = (int) Math.pow(
-//				2.0, (Math.ceil(Math.log(a) / Math.log(2.0)) + 1));
-//		
-//		System.out.println(x);
-		
-//		 LinkedHashMap lhm = new LinkedHashMap();
-//		 
-//		 lhm.put("Zara", new Double(3434.34));
-//	     lhm.put("Mahnaz", new Double(123.22));
-//	     lhm.put("ZaraX", new Double(3435.34));
-//	     
-//	     Set set = lhm.entrySet();
-//	     
-//	     Iterator i = set.iterator();
-//	     
-//	     while(i.hasNext()) {
-//	         Map.Entry me = (Map.Entry)i.next();
-//	         System.out.print(me.getKey() + ": ");
-//	         System.out.println(me.getValue());
-//	      }
-//	     
-//	      System.out.println();
-		
-		String str = "Rimon";
-
-		String str2 = "MinOR";
-		
-		char ch1[] = str.toLowerCase().toCharArray();
-		
-		char ch2[] = str2.toLowerCase().toCharArray();
-		
-		char ch3[] = str2.toUpperCase().toCharArray();
-		
-		Arrays.sort(ch1);
-		
-		Arrays.sort(ch2);
-		
-		Arrays.sort(ch3);
+	public void fun2() throws Exception {
 		
 		
-		System.out.println(Arrays.equals(ch1, ch3));
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.println(Arrays.equals(ch1, ch2));
-	     
-	    System.out.println(ch1);
-	    
-	    System.out.println(ch2);
-	    
+		String strs[] = bf.readLine().split(" ");
+		
+		for (int i = 0; i < strs.length; i++)
+			System.out.println(strs[i]);
+		
 	      
 	}
 	
