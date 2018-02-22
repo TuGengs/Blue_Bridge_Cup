@@ -46,11 +46,7 @@ public class The_Largest_Number_Of_Integers {
 		
 		Integer N = sc.nextInt();
 		
-		if (N < 0 || N > 20) {
-			
-			return;
-			
-		}
+		if (N > 0 && N < 20) {
 		
 		TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
 		
@@ -91,6 +87,8 @@ public class The_Largest_Number_Of_Integers {
 		
 		
 		System.out.println(min);
+		
+		}
 		
 		
 	}
