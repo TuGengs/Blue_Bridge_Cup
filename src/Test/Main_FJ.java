@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class Main_FJ {
 
-	public static char[] c = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+	public static char[] c = {'A','A','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        int n=scan.nextInt();
-        print(n);
+//        Scanner scan = new Scanner(System.in);
+//        int n=scan.nextInt();
+//        print(n);
+    	
+    		System.out.println(c[0] == c[1]);
     
     }
     private static void print(int n){
