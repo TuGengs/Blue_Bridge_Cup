@@ -1,0 +1,89 @@
+package algorithm;
+
+import java.util.*;
+
+class Student {
+	
+	String name;
+	String sex;
+	int age;
+	int grade;
+
+	public Student(String name, String sex, int age, int grade) {
+		
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+		this.grade = grade;
+	}
+}
+
+public class P1102 {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		if (n >= 1000) {
+			
+			return;
+			
+		}
+		
+		Student[] arr = new Student[n];
+		Student zj;
+		
+		for (int i = 0; i < n; i++) {
+			
+			String name = sc.next();
+			String sex = sc.next();
+			String age = sc.next();
+			String grade = sc.next();
+			
+			if (age.indexOf(".") != -1 || age.indexOf(".") != -1) {
+				
+				return;
+				
+			}
+			
+			
+			if (!(name.length() <= 20) || !(sex.length() <= 20)) {
+				
+				return;
+				
+			}
+			
+			arr[i] = new Student(name, sex, Integer.valueOf(age), Integer.valueOf(grade));
+		}
+
+//		for (int i = 0; i < n; i++) {
+//			
+//			for (int j = 1; j < n - i; j++) {
+//				if (arr[j - 1].grade > arr[j].grade) {
+//					zj = arr[j - 1];
+//					arr[j - 1] = arr[j];
+//					arr[j] = zj;
+//				}
+//			}
+//		}
+		
+		
+		Arrays.sort(arr, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				
+				return o1.grade > o2.grade ? 1 : o1.grade == o2.grade ? 0 : -1;
+				
+			}
+			
+			
+		});
+		
+		
+		for (int i = 0; i < n; i++) {
+			System.out.println(arr[i].name + " " + arr[i].sex + " " + arr[i].age + " " + arr[i].grade);
+
+		}
+	}
+}

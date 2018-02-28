@@ -12,6 +12,13 @@ import java.util.Set;
 import org.junit.Test;
 
 public class T {
+	
+	@Test
+	public void fun3() {
+		
+		System.out.println(2e5);
+		
+	}
 
 	@Test
 	public void fun2() throws Exception {
