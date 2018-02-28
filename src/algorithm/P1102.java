@@ -22,13 +22,8 @@ public class P1102 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
 		
-		if (n >= 1000) {
-			
-			return;
-			
-		}
+		int n = sc.nextInt();
 		
 		Student[] arr = new Student[n];
 		Student zj;
@@ -37,23 +32,10 @@ public class P1102 {
 			
 			String name = sc.next();
 			String sex = sc.next();
-			String age = sc.next();
-			String grade = sc.next();
+			int age = sc.nextInt();
+			int grade = sc.nextInt();
 			
-			if (age.indexOf(".") != -1 || age.indexOf(".") != -1) {
-				
-				return;
-				
-			}
-			
-			
-			if (!(name.length() <= 20) || !(sex.length() <= 20)) {
-				
-				return;
-				
-			}
-			
-			arr[i] = new Student(name, sex, Integer.valueOf(age), Integer.valueOf(grade));
+			arr[i] = new Student(name, sex, age, grade);
 		}
 
 //		for (int i = 0; i < n; i++) {
