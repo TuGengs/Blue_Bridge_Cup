@@ -1,0 +1,2 @@
+zrf is:1/7; ssh is:26/25
+(zrf==ssh) is:0; (zrf<ssh) is:1
