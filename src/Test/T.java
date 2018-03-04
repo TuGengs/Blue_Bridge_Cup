@@ -16,7 +16,7 @@ public class T {
 	@Test
 	public void fun3() {
 		
-		System.out.println(5 / 2.0 - 5 / 2);
+//		System.out.println(5 / 2.0 - 5 / 2);
 		
 	}
 
