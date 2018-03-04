@@ -25,6 +25,9 @@ import java.util.Scanner;
  * 一共有8种，给定k，请求出满足上面要求的序列的个数。
  * 
  * 
+ * a[i][j] = a[i-1][j]+a[i-1][j-1]; (i k j n)
+ * 
+ * 
  * 
  * @author tugeng
  *
@@ -33,6 +36,46 @@ public class Oscillating_Sequence_Vip2 {
 	
 	public static void main(String[] args) {
 		
+		Integer k = new Scanner(System.in).nextInt();
+		
+		int a[][] = new int[k + 1][k + 1];
+		
+		for (int i = 1; i <= k; i++) {
+			
+			for (int j = 1; j <= k; j++) {
+				
+				if (j == 1 && i != j) {
+					
+					a[i][j] = i * (i + 1);
+					
+					continue;
+					
+				}
+				
+				if (i == j) {
+					
+					a[i][j] = 2;
+					
+				} else {
+					
+					a[i][j] += a[i-1][j] + a[i-1][j-1];
+					
+				}
+				
+				
+			}
+			
+		}
+		
+		int ans = 0;
+		
+		for (int o = 1; o <= k; o++) {
+			
+			ans += a[k - 1][o];
+			
+		}
+		
+		System.out.println(ans);
 		
 		
 	}
