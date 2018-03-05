@@ -41,7 +41,7 @@ import java.util.Scanner;
  * @author tugeng
  *
  */
-public class A_Travelers_Budget {
+public class A_Travelers_Budget_Vip {
 	
 	static class Node {
 		
