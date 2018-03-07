@@ -1,13 +1,9 @@
 package Test;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -16,11 +12,9 @@ public class T {
 	@Test
 	public void fun3() {
 		
-//		System.out.println((int)(55.32134 * 100));
 		
-//		System.out.println(((int)(55.32134 * 100)) / 100.0);
+		System.out.println("at".indexOf("a"));
 		
-		System.out.println("312".substring(0, 3));
 		
 	}
 
