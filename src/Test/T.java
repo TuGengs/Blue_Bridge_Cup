@@ -2,8 +2,9 @@ package Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.junit.Test;
 
@@ -12,8 +13,17 @@ public class T {
 	@Test
 	public void fun3() {
 		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		
-		System.out.println("at".indexOf("a"));
+		Date currentTime = new Date();
+		
+		System.out.println(formatter.format(currentTime));
+		
+//		System.out.println(formatter.format("12341221"));
+		
+//		DecimalFormat df = new DecimalFormat("####-##-##");
+		
+//		System.out.println(df.format("12341221"));
 		
 		
 	}
