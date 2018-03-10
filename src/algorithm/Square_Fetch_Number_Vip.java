@@ -116,7 +116,6 @@ public class Square_Fetch_Number_Vip {
 		
 //		System.out.println(costMax);
 
-		
 	}
 	
 	public static void dfs(int x, int y) {
