@@ -13,27 +13,9 @@ import java.util.Scanner;
  * @author tugeng
  *
  */
-public class Division_Of_Numbers {
+public class Division_Of_Numbers2 {
 	
-	public static int cnt = 0;  
 	
-	public static void dfs(int front, int n, int step) {
-		
-//		System.out.println(front + " " + n + " " + step);
-		
-		if(step == 1) {  
-			
-	        cnt++;  
-	        
-	        return ;  
-	        
-	    }  
-		
-	    for(int i = front; i <= n / step; i++)  
-	        dfs(i, n - i, step - 1);  
-	    
-		
-	}
 	
 	public static void main(String[] args) {
 		
@@ -45,9 +27,22 @@ public class Division_Of_Numbers {
 		
 		k = sc.nextInt();
 	    
-	    dfs(1, n, k);
-	    
-	    System.out.println(cnt);
+		int[][] f = new int[1000][1000];  
+		
+        f[1][1]=1;
+        
+        for(int i=2;i<=n;i++){  
+        	
+            for(int j=1;j<=k && j<=i;j++){ 
+            	
+                f[i][j] = f[i-1][j-1] + f[i-j][j];  
+            }
+            
+        }  
+        
+        System.out.println(f[n][k]);  
+
+		
 		
 	}
 	
