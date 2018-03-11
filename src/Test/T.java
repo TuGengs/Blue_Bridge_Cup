@@ -2,8 +2,8 @@ package Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -12,24 +12,19 @@ public class T {
 	@Test
 	public void fun3() {
 		
-		List<List<Integer>> l2 = new ArrayList<List<Integer>>();
+		int a[] = {1,2};
 		
-		List<Integer> l = new ArrayList<Integer>();
+		int b[] = {1,2,3};
 		
-		l.add(1);
+		int c[] = {1,2};
 		
-		l.add(2);
+		Map<int[], Integer> map = new HashMap<int[], Integer>();
 		
-		l.add(3);
+		map.put(a, 1);
 		
-		l2.add(l);
+		map.put(b, 2);
 		
-		l.remove(1);
-		
-		System.out.println(l2.get(0).size());
-		
-		System.out.println(l);
-		
+		System.out.println(map.get(c));
 		
 	}
 

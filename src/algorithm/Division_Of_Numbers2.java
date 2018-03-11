@@ -10,12 +10,15 @@ import java.util.Scanner;
  * 	 问有多少种不同的分法。
  * 
  * 
+ * 用到了分类的思想。对于f[i][j]代表i分为j份。我们分为以下两类：
+ * 每份都没有1：那么我们只需要将每份都减1然后保证有j份。即加上f[i-j][j]。
+ * 至少有一份1：那么我们提出1个1,即加上f[i-1][j-1]
+ * 
+ * 
  * @author tugeng
  *
  */
 public class Division_Of_Numbers2 {
-	
-	
 	
 	public static void main(String[] args) {
 		
@@ -42,9 +45,7 @@ public class Division_Of_Numbers2 {
         
         System.out.println(f[n][k]);  
 
-		
-		
-	}
+	}	
 	
 
 }
