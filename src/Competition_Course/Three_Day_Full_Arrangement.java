@@ -50,7 +50,7 @@ public class Three_Day_Full_Arrangement {
 	
 	public static void main(String[] args) {
 		
-		fun("ABCD".toCharArray(), 0);
+		fun("ABC".toCharArray(), 0);
 		
 		System.out.println(times);
 		
