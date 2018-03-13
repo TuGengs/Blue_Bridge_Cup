@@ -12,7 +12,6 @@ import java.util.Scanner;
  * @author tugeng
  *
  */
-
 class Palace{
 	
     String start;//初始字符串  
@@ -43,12 +42,13 @@ class Palace{
                 tmp++;  
             }  
             int[] d = {-3,3,-1,1};//方向数组，分别表示上下左右  
-            for(int i=0;i<4;i++){  
-                int p = tmp+d[i];  
+            for(int i=0;i<4;i++){ 
+                int p = tmp+d[i]; 
                 int chengji = tmp*p;  
                 if(p > -1 && p < 9 
                 		&& chengji != 6 && chengji != 30){//2-->3,3-->2,5-->6,6-->5跨行了，要去掉  
-                    String change = cur;  
+                    
+                		String change = cur;  
                     char c = cur.charAt(p);
                     
                     change = cur.replace('.', '*');//交换String中的两个字符，借助中间字符‘*’  
@@ -74,7 +74,8 @@ class Palace{
             
         }  
         
-        System.out.println(result);  
+        System.out.println(result); 
+        
     }  
     
 }
