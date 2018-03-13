@@ -31,7 +31,7 @@ public class Langton_Ant {
 	
 	public static void dfs(int prex, int prey, int x, int y, int sn, int k) {	// sn: 0123 UDLR表示
 		
-		if (x < 0 || x >= a.length || y < 0 || y >= a.length) {
+		if (x < 1 || x >= a.length || y < 1 || y >= a.length) {
 			
 			System.out.println(prex + " " + prey);
 			
