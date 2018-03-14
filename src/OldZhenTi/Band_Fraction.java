@@ -36,7 +36,7 @@ public class Band_Fraction {
 					int mu = Integer.valueOf(String.valueOf(aa).substring(i));
 					
 					if (zi < mu) {
-						 
+						
 						break;
 						
 					}
