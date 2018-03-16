@@ -9,8 +9,24 @@ import org.junit.Test;
 
 public class T {
 	
+	public String fun33(String str) {
+		
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		map.put("123", 123);
+		
+		return String.valueOf(map.get(str));
+		
+	}
+	
 	@Test
 	public void fun3() {
+		
+		Object o = null;
+		
+		System.out.println(String.valueOf(o));
+		
+//		System.out.println(fun33("121"));
 		
 		int a[] = {1,2};
 		
@@ -24,7 +40,7 @@ public class T {
 		
 		map.put(b, 2);
 		
-		System.out.println(map.get(c));
+//		System.out.println(map.get(c));
 		
 	}
 
