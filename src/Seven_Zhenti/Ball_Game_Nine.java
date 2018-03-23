@@ -5,15 +5,19 @@ import java.util.Scanner;
 public class Ball_Game_Nine {
 	
 	public static void main(String[] args) {  
-	    Scanner sc = new Scanner(System.in);  
+	    Scanner sc = new Scanner(System.in);
+	    
 	    int[] a = new int[5];//堆数
+	    
 	    int[] b = new int[3];//能取球数
+	    
 	    for (int i = 0; i < 3; i++) {  
 	        b[i] = sc.nextInt();  
 	    }  
 	    for (int i = 0; i < 5; i++) {
 	        a[i] = sc.nextInt();  
 	    }  
+	    
 	    for (int i = 0; i < 3; i++) {//给能取球数从大到小排列  
 	        for (int j = 0; j < 3-i-1; j++) {  
 	            if(b[j]>b[j+1]){  
@@ -23,6 +27,7 @@ public class Ball_Game_Nine {
 	            }  
 	        }  
 	    }  
+	    
 	    for (int i = 0; i < 5; i++) {
 	        int x = 0, y = 0;//x第一个人的总球数，y第二个人的总球数  
 	        while(a[i]!=0){
@@ -33,7 +38,7 @@ public class Ball_Game_Nine {
 	                    continue;  
 	                }  
 	                if(b[j]>a[i]) continue;  
-	                x+=b[j];  
+	                x+=b[j];
 	                a[i]-=b[j];  
 	                x1 = true;  
 	                break;  
@@ -42,7 +47,7 @@ public class Ball_Game_Nine {
 	                for (int j = 2; j >= 0; j--) {  
 	                    if(b[j]>a[i]) continue;  
 	                    x+=b[j];  
-	                    a[i]-=b[j];  
+	                    a[i]-=b[j];
 	                }  
 	            }  
 	            for (int j = 2; j >= 0; j--) {//第二个人与第一个人取法上，原则相同  
@@ -80,6 +85,7 @@ public class Ball_Game_Nine {
 	        }else{  
 	            System.out.print(0+" ");
 	        }
+	        
 	    }
 	}  
 
