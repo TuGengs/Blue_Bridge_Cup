@@ -88,7 +88,7 @@ public class The_Travel_Expenses_Of_The_Minister2 {
 		}
 
 		System.out.println(caculate(max));
-
+ 
 	}
 
 }
