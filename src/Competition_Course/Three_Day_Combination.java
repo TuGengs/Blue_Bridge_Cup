@@ -69,7 +69,7 @@ public class Three_Day_Combination {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(fun(6, 3));
+		System.out.println(fun(10, 5));
 		
 		char chs[]={'a', 'b', 'c', 'd', 'e', 'f'};  
 		 

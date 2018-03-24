@@ -19,8 +19,51 @@ public class T {
 		
 	}
 	
+	public static boolean is_prime(long a) {
+		
+		if(a ==2 || a==3) {
+			
+			return true;
+			
+		}  
+		
+		//bug所在，不加的话，会判断1为true
+		if (a == 1) {
+			
+			return false;
+			
+		}
+		
+        //不在6的倍数两侧的一定不是质数  
+        if(a % 6!= 1 && a % 6!= 5) {
+        	
+        	return false;
+        	
+        }  
+
+        //在6的倍数两侧的也可能不是质数  
+        double tmp = Math.sqrt(a);  
+        
+        for(double i = 5; i <= tmp; i+=6 ) {
+        	
+        	if(a % i== 0 || a % (i+ 2) == 0) {
+        		
+        		 return false;  
+        		
+        	}
+
+        	
+        }
+        
+        return true;
+        
+		
+	}
+	
 	@Test
 	public void fun3() {
+		
+//		System.out.println(is_prime(987654321));
 		
 		Object o = null;
 		
@@ -106,6 +149,13 @@ public class T {
 		    
 		    System.out.println(i);
 	    
+	}
+	
+	@Test
+	public void funx() {
+		
+		
+		
 	}
 	
 }
