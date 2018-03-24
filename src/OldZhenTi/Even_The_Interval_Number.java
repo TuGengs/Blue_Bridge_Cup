@@ -1,7 +1,9 @@
 package OldZhenTi;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryMXBean;
+import java.lang.management.MemoryUsage;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,8 +30,6 @@ public class Even_The_Interval_Number {
 			
 		}
 		
-//		int sum = n;
-		
 		int sum = 0;
 		
 		for(int i = 0; i < n; i++) {
@@ -40,40 +40,35 @@ public class Even_The_Interval_Number {
 			
 			for(int j = i; j < n; j++) {
 				
-				if(min > list.get(j)) {  
-	                min = list.get(j);  
+				if(min > list.get(j)) { 
+					
+	                min = list.get(j);
+	                
 	            }  
-	            if(max < list.get(j)) {  
-	                max = list.get(j);  
+	            if(max < list.get(j)) {
+	            	
+	                max = list.get(j); 
+	                
 	            }  
 	            if(max - min == j - i) {  
-	                sum++;  
+	               
+	            	sum++;  
+	            	
 	            }  
+	            
 				
 			}
 			
 			
 		}
 		
-//		for (int k = 0; k < n; k++) {
-//			
-//			for (int i = 0; i < n - k; i++) {
-//				
-//				List<Integer> l = list.subList(i, i + k + 1);
-//				
-//				if ((Collections.max(l) - Collections.min(l)) == l.size() - 1) {
-//					
-//					sum = sum + 1;
-//					
-//				}
-//				
-//			}
-//			
-//		}
-		
+//		MemoryMXBean bean = ManagementFactory.getMemoryMXBean();
+//
+//		MemoryUsage memoryUsage = bean.getHeapMemoryUsage();
+//		
+//		System.out.println(memoryUsage.getUsed());	bytes.
 		
 		System.out.println(sum);
-		
 		
 	}
 	
