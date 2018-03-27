@@ -154,7 +154,7 @@ public class T {
 	@Test
 	public void funx() {
 		
-		
+		System.out.println(1<<0);
 		
 	}
 	
