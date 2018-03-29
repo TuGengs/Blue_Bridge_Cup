@@ -153,8 +153,10 @@ public class T {
 	
 	@Test
 	public void funx() {
+			
+		int flag = 1;
 		
-		System.out.println(1<<0);
+		System.out.println(flag &= 1);
 		
 	}
 	
