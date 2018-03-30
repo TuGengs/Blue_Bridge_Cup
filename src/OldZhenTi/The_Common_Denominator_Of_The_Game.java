@@ -17,6 +17,8 @@ public class The_Common_Denominator_Of_The_Game {
                 int t = dfs(numA, listA, listA[start].get(i));
 
                 numA[listA[start].get(i)]++;
+                
+//                System.out.println(t + "     " + start);
 
                 if(t == -1)
                 	return 1;
