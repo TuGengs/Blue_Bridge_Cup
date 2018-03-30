@@ -1,57 +1,48 @@
 package Competition_Course;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 // 1000 以内素数筛选法
 public class Prime_Number_Form {
 
-	public static boolean[] nList = new boolean[1000]; 
+	static boolean[] is_Primes; 
 	
-	public static void main(String[] args) {
+	static List<Integer> list = new ArrayList<Integer>();
+	
+	static void get_all_prime(int n) {
 		
-		Integer times = new Scanner(System.in).nextInt();
+		is_Primes = new boolean[n + 1];
 		
-		if (times == 1) {
+		for (int i = 2; i <= n; i++) {
 			
-			System.out.println(2);
+			if (!is_Primes[i]) {
+				
+				list.add(i);
+				
+			}
 			
-			return ;
+			int size = list.size();
+			
+			for (int j = 0; j < size && list.get(j) * i <= n; j++) {
+				
+				is_Primes[list.get(j) * i] = true;
+				
+				if(i % list.get(j) == 0)
+					break;
+				
+			}
 			
 		}
 		
-		int n = 0;
+	}
+
+	public static void main(String[] args) {
 		
-		int t,sq = (int)Math.sqrt(500 * 2 + 1);  
+		get_all_prime(10000000);
 		
-		for (n = 3; n <= sq; n += 2) {
-			
-	        if (nList[n>>1]) continue;
-	        
-	        for (t = n * n; t <= 500 << 1; t += n << 1) {//筛选循环 
-	            nList[t >> 1] = true;
-	        }
-	        
-	    }
-		
-		int tm = 1;
-		
-		for (t = 1; t < 500; ++t) {
-			
-	        if (nList[t]) continue;
-	        
-	        tm ++; 
-	        
-	        if (tm == times) {
-	        		
-	        		System.out.println((t << 1) + 1);
-	        
-	        		return ;
-	        		
-	        }
-	        
-	        
-	    }  
-		
+		System.out.println(list.size());	// 664579	664579
+	
 	}
 	
 }
