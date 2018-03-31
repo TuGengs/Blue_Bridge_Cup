@@ -48,6 +48,7 @@ public class Ball_Game_Nine {
 	                    if(b[j]>a[i]) continue;  
 	                    x+=b[j];  
 	                    a[i]-=b[j];
+	                    break;
 	                }  
 	            }  
 	            for (int j = 2; j >= 0; j--) {//第二个人与第一个人取法上，原则相同  
@@ -65,6 +66,7 @@ public class Ball_Game_Nine {
 	                    if(b[j]>a[i]) continue;  
 	                    y+=b[j];  
 	                    a[i]-=b[j];  
+	                    break;
 	                }  
 	            }  
 	            
